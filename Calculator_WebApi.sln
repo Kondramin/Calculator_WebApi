@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator_WebApi", "Calculator_WebApi\Calculator_WebApi.csproj", "{7F1F6FBC-DC13-4166-BE14-F8CF57EC2E79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator_WebApi", "Calculator_WebApi\Calculator_WebApi.csproj", "{7F1F6FBC-DC13-4166-BE14-F8CF57EC2E79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator_WebApi.Core", "Calculator_WebApi.Core\Calculator_WebApi.Core.csproj", "{7E0E298C-8862-4663-81C7-FA02DF3C23F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator_WebApi.Services", "Calculator_WebApi.Service\Calculator_WebApi.Services.csproj", "{5F457F56-5247-408B-AC54-A2D2C7A58173}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{7F1F6FBC-DC13-4166-BE14-F8CF57EC2E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F1F6FBC-DC13-4166-BE14-F8CF57EC2E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F1F6FBC-DC13-4166-BE14-F8CF57EC2E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0E298C-8862-4663-81C7-FA02DF3C23F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E0E298C-8862-4663-81C7-FA02DF3C23F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E0E298C-8862-4663-81C7-FA02DF3C23F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E0E298C-8862-4663-81C7-FA02DF3C23F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F457F56-5247-408B-AC54-A2D2C7A58173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F457F56-5247-408B-AC54-A2D2C7A58173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F457F56-5247-408B-AC54-A2D2C7A58173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F457F56-5247-408B-AC54-A2D2C7A58173}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
