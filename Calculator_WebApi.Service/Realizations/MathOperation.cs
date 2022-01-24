@@ -8,7 +8,7 @@ namespace Calculator_WebApi.Services.Realizations
     {
         public int DoMathOperation(Calculator calculator)
         {
-            switch (calculator.Operand)
+            switch (calculator.MathOperator)
             {
                 case "+":
                     return calculator.Sum();
@@ -19,7 +19,7 @@ namespace Calculator_WebApi.Services.Realizations
                 case "/":
                     return calculator.Division();
                 default:
-                    throw new InvalidOperationException($"Operand value \"{calculator.Operand}\" is invalid or not implemented");
+                    throw new InvalidOperationException($"Operand value \"{calculator.MathOperator}\" is invalid or not implemented");
             }
         }
     }

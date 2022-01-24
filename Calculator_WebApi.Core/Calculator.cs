@@ -4,7 +4,7 @@
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public string Operand { get; set; }
+        public string MathOperator { get; set; }
 
 
         public int Sum()
