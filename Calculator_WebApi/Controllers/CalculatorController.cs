@@ -22,7 +22,9 @@ namespace Calculator_WebApi.Controllers
             if(!ModelState.IsValid) return BadRequest();
             var result = _MathOperationService.DoMathOperation(calculator);
 
-            return Ok(result);
+            var a = Ok(result);
+
+            return a;
         }
 
     }
