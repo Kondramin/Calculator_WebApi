@@ -15,6 +15,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Calculator_WebApi.Core\Calculator_WebApi.Core.csproj" />
+    <ProjectReference Include="..\Calculator_WebApi.Service\Calculator_WebApi.Services.csproj" />
+    <ProjectReference Include="..\Calculator_WebApi\Calculator_WebApi.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,8 @@
 ﻿using Calculator_WebApi.Core;
 using NUnit.Framework;
+using System;
 
-namespace Calculator_WebApi.Tests
+namespace Calculator_WebApi.Tests.Calculator_WebApi.Core
 {
     [TestFixture]
     public class CalculatorTests
@@ -83,6 +84,19 @@ namespace Calculator_WebApi.Tests
             // Assert
             //Assert.AreEqual(5, result);
             return result;
+        }
+
+        [Test]
+        public void DivisionByZeroResultExceptionTest()
+        {
+            // Arrange
+            var calculator = new Calculator() { X = 10, Y = 0 };
+
+            // Act - Assert
+            Assert.Throws<DivideByZeroException>(() => calculator.Division());
+
+            // Assert
+           // Assert.AreEqual(5, result);
         }
     }
 }
