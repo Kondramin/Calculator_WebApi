@@ -24,7 +24,7 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi.Services
         public int DoMathOperationTest(int x, int y, string mathOperator)
         {
             //Arrange
-            var mathOperation = new MathOperation();
+            var mathOperation = new MathOperationService();
 
             //Act
             var result = mathOperation.DoMathOperation(new Calculator() 
@@ -43,7 +43,7 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi.Services
         public void DoMathOperationDivisionByZeroExceptionTest()
         {
             // Arrange
-            var mathOperation = new MathOperation();
+            var mathOperation = new MathOperationService();
 
             // Act - Assert
             Assert.Throws<DivideByZeroException>(() => mathOperation.DoMathOperation(new Calculator()
@@ -67,7 +67,7 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi.Services
         public void DoMathOperationIncorrectMathOperatorExceptionTest(int x, int y, string mathOperator)
         {
             // Arrange
-            var mathOperation = new MathOperation();
+            var mathOperation = new MathOperationService();
 
             // Act - Assert
             Assert.Throws<InvalidOperationException>(() => mathOperation.DoMathOperation(new Calculator()
