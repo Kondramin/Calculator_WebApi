@@ -4,7 +4,7 @@ using System;
 
 namespace Calculator_WebApi.Services.Realizations
 {
-    internal class MathOperationService : IMathOperationService
+    public class MathOperationService : IMathOperationService
     {
         public int DoMathOperation(Calculator calculator)
         {
@@ -19,7 +19,7 @@ namespace Calculator_WebApi.Services.Realizations
                 case "/":
                     return calculator.Division();
                 default:
-                    throw new InvalidOperationException($"Operand value \"{calculator.MathOperator}\" is invalid or not implemented");
+                    throw new InvalidOperationException($"Math operator value \"{calculator.MathOperator}\" is invalid or not implemented");
             }
         }
     }

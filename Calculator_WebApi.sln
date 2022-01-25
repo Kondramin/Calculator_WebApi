@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator_WebApi.Core", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator_WebApi.Services", "Calculator_WebApi.Service\Calculator_WebApi.Services.csproj", "{5F457F56-5247-408B-AC54-A2D2C7A58173}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator_WebApi.Tests", "Calculator_WebApi.Tests\Calculator_WebApi.Tests.csproj", "{DD51F530-B0DA-429E-AC7B-910DBDB3E02C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5F457F56-5247-408B-AC54-A2D2C7A58173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F457F56-5247-408B-AC54-A2D2C7A58173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F457F56-5247-408B-AC54-A2D2C7A58173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD51F530-B0DA-429E-AC7B-910DBDB3E02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD51F530-B0DA-429E-AC7B-910DBDB3E02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD51F530-B0DA-429E-AC7B-910DBDB3E02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD51F530-B0DA-429E-AC7B-910DBDB3E02C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
