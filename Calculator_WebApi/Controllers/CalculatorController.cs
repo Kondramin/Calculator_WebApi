@@ -9,18 +9,18 @@ namespace Calculator_WebApi.Controllers
     [ApiController]
     public class CalculatorController : ControllerBase
     {
-        private readonly IMathOperation _MathOperation;
+        private readonly IMathOperationService _MathOperationService;
 
-        public CalculatorController(IMathOperation mathOperation)
+        public CalculatorController(IMathOperationService mathOperationService)
         {
-            _MathOperation = mathOperation;
+            _MathOperationService = mathOperationService;
         }
 
         [HttpPost]
         public async Task<ActionResult<int>> Post(Calculator calculator)
         {
             if(!ModelState.IsValid) return BadRequest();
-            var result = _MathOperation.DoMathOperation(calculator);
+            var result = _MathOperationService.DoMathOperation(calculator);
 
             return Ok(result);
         }

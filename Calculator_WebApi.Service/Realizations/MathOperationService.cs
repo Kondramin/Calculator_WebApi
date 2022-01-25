@@ -4,7 +4,7 @@ using System;
 
 namespace Calculator_WebApi.Services.Realizations
 {
-    internal class MathOperation : IMathOperation
+    internal class MathOperationService : IMathOperationService
     {
         public int DoMathOperation(Calculator calculator)
         {

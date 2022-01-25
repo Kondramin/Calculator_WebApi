@@ -2,7 +2,7 @@
 
 namespace Calculator_WebApi.Services.Interfaces
 {
-    public interface IMathOperation
+    public interface IMathOperationService
     {
         public int DoMathOperation(Calculator calculator);
     }
