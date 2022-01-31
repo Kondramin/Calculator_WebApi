@@ -1,5 +1,6 @@
 ﻿using Calculator_WebApi.Controllers;
 using Calculator_WebApi.Core;
+using Calculator_WebApi.DTO;
 using Calculator_WebApi.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
@@ -19,7 +20,7 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi
             var calculatorController = new CalculatorController(CreatMock().Object);
 
             //Act
-            var result = calculatorController.Post(new Calculator());
+            var result = calculatorController.Post(new CalculatorDTO());
 
 
             //Assert
@@ -28,14 +29,14 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi
 
 
         [Test]
-        public void postreturnvalusetest()
+        public void PostReturnValuseTest()
         {
             //Arrange
             var calculatorcontroller = new CalculatorController(CreatMock().Object);
             var expected = 999;
 
             //Act
-            var result = calculatorcontroller.Post(new Calculator());
+            var result = calculatorcontroller.Post(new CalculatorDTO());
 
             ObjectResult objectResult = result.Result.Result as ObjectResult;
 
@@ -49,7 +50,7 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi
         private Mock<IMathOperationService> CreatMock()
         {
             var mock = new Mock<IMathOperationService>();
-            mock.Setup(s => s.DoMathOperation(It.IsAny<Calculator>())).Returns(999);
+            mock.Setup(s => s.DoMathOperation(It.IsAny<CalculatorEntity>())).Returns(999);
 
             return mock;
         }

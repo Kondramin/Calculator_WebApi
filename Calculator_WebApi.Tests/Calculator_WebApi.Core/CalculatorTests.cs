@@ -8,18 +8,14 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi.Core
     public class CalculatorTests
     {
         [Test]
-        [TestCase(1, 1, ExpectedResult = 2)]
-        [TestCase(10, 10, ExpectedResult = 20)]
-        [TestCase(15, 12, ExpectedResult = 27)]
         [TestCase(50, -1, ExpectedResult = 49)]
-        [TestCase(12, -50, ExpectedResult = -38)]
         public int SumResultTest(int x, int y)
         {
             // Arrange
-            var calculator = new Calculator() { X = x, Y = y };
-            
+            var calculator = new CalculatorLogic();
+
             // Act
-            var result = calculator.Sum();
+            var result = calculator.Summ(x, y);
 
             // Assert
             //Assert.AreEqual(120, result);
@@ -28,18 +24,14 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi.Core
 
 
         [Test]
-        [TestCase(1, 1, ExpectedResult = 0)]
-        [TestCase(10, 8, ExpectedResult = 2)]
-        [TestCase(15, 25, ExpectedResult = -10)]
-        [TestCase(50, -1, ExpectedResult = 51)]
         [TestCase(12, -50, ExpectedResult = 62)]
         public int DifferenceResultTest(int x, int y)
         {
             // Arrange
-            var calculator = new Calculator() { X = x, Y = y };
-            
+            var calculator = new CalculatorLogic();
+
             // Act
-            var result = calculator.Difference();
+            var result = calculator.Difference(x, y);
 
             // Assert
             //Assert.AreEqual(80, result);
@@ -48,18 +40,14 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi.Core
 
 
         [Test]
-        [TestCase(1, 1, ExpectedResult = 1)]
-        [TestCase(10, 8, ExpectedResult = 80)]
-        [TestCase(15, 25, ExpectedResult = 375)]
-        [TestCase(50, 0, ExpectedResult = 0)]
         [TestCase(12, -50, ExpectedResult = -600)]
         public int MultipliResultTest(int x, int y)
         {
             // Arrange
-            var calculator = new Calculator() { X = x, Y = y };
-            
+            var calculator = new CalculatorLogic();
+
             // Act
-            var result = calculator.Multipli();
+            var result = calculator.Multipli(x, y);
 
             // Assert
             //Assert.AreEqual(2000, result);
@@ -68,18 +56,14 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi.Core
 
 
         [Test]
-        [TestCase(1, 1, ExpectedResult = 1)]
         [TestCase(10, 5, ExpectedResult = 2)]
-        [TestCase(15, 25, ExpectedResult = 0)]
-        [TestCase(50, 5, ExpectedResult = 10)]
-        [TestCase(12, -4, ExpectedResult = -3)]
         public int DivisionResultTest(int x, int y)
         {
             // Arrange
-            var calculator = new Calculator() { X = x, Y = y };
-            
+            var calculator = new CalculatorLogic();
+
             // Act
-            var result = calculator.Division();
+            var result = calculator.Division(x, y);
 
             // Assert
             //Assert.AreEqual(5, result);
@@ -90,10 +74,10 @@ namespace Calculator_WebApi.Tests.Calculator_WebApi.Core
         public void DivisionByZeroResultExceptionTest()
         {
             // Arrange
-            var calculator = new Calculator() { X = 10, Y = 0 };
+            var calculator = new CalculatorLogic();
 
             // Act - Assert
-            Assert.Throws<DivideByZeroException>(() => calculator.Division());
+            Assert.Throws<DivideByZeroException>(() => calculator.Division(10 ,0));
 
             // Assert
            // Assert.AreEqual(5, result);

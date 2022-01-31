@@ -4,6 +4,6 @@ namespace Calculator_WebApi.Services.Interfaces
 {
     public interface IMathOperationService
     {
-        public int DoMathOperation(Calculator calculator);
+        public int DoMathOperation(CalculatorEntity calculator);
     }
 }

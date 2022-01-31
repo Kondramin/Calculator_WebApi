@@ -6,18 +6,20 @@ namespace Calculator_WebApi.Services.Realizations
 {
     public class MathOperationService : IMathOperationService
     {
-        public int DoMathOperation(Calculator calculator)
+        private readonly CalculatorLogic _CalculatorLogic = new CalculatorLogic();
+
+        public int DoMathOperation(CalculatorEntity calculator)
         {
             switch (calculator.MathOperator)
             {
                 case "+":
-                    return calculator.Sum();
+                    return _CalculatorLogic.Summ(calculator.X, calculator.Y);
                 case "-":
-                    return calculator.Difference();
+                    return _CalculatorLogic.Difference(calculator.X, calculator.Y);
                 case "*":
-                    return calculator.Multipli();
+                    return _CalculatorLogic.Multipli(calculator.X, calculator.Y);
                 case "/":
-                    return calculator.Division();
+                    return _CalculatorLogic.Division(calculator.X, calculator.Y);
                 default:
                     throw new InvalidOperationException($"Math operator value \"{calculator.MathOperator}\" is invalid or not implemented");
             }
